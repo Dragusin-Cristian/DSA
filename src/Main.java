@@ -7,8 +7,9 @@ public class Main {
 
 //        HashMaps.example();
 //        ArrayLists.example();
-        StringBuilders.example();
+//        StringBuilders.example();
+
+        Problems.execute();
+
     }
-
-
 }
