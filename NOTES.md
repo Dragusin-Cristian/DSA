@@ -1,1 +1,2 @@
 - Main is static because JVM needs to call it before any object exists.
+- ArrayList is an array that can be modified in size at runtime
