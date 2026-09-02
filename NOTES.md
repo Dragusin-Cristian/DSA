@@ -1,2 +1,3 @@
 - Main is static because JVM needs to call it before any object exists.
 - ArrayList is an array that can be modified in size at runtime
+- StringBuilder DS append method has LogO^1, while simple String has LogO^n
