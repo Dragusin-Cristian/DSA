@@ -3,8 +3,31 @@ import java.util.HashMap;
 public class Problems {
 
     public static void execute(){
-        System.out.println(Problems.checkUniqueChars("This"));
+//        1.1
+//        System.out.println(Problems.checkUniqueChars("This"));
+
+//        1.2
+        char[] chars = {'a', 'b', 'c', '\0'};
+        System.out.println(reverseCString(chars));
     };
+
+
+//    1.2 Write code to reverse a C-Style String. (C-String means that “abcd” is represented as
+//    five characters, including the null character.)
+    static char[] reverseCString(char[] chars) {
+        if(chars == null || chars.length == 0) return new char[0];
+        int strLength = chars.length - 1;
+        char[] res = new char[chars.length];
+        for (int i = 0; i < strLength; i++) {
+            res[i] = chars[strLength-i-1];
+        }
+        res[strLength] = chars[strLength];
+        return res;
+
+
+
+    }
+
 
 //    1.1 Implement an algorithm to determine if a string has all unique characters. What if you
 //    can not use additional data structures?
