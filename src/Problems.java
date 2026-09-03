@@ -7,9 +7,40 @@ public class Problems {
 //        System.out.println(Problems.checkUniqueChars("This"));
 
 //        1.2
-        char[] chars = {'a', 'b', 'c', '\0'};
-        System.out.println(reverseCString(chars));
+//        char[] chars = {'a', 'b', 'c', '\0'};
+//        System.out.println(reverseCString(chars));
+
+//        8.1
+        System.out.println(Problems.nthFibonacci(4));
     };
+
+
+//    8.1 Write a method to generate the nth Fibonacci number
+    static Integer nthFibonacci(Integer n) {
+//        1, 2, 3, 5, 8
+//        n = 4, means the number is 5
+
+//        NAIVE APPROACH:
+//        return Problems.nthFibonacci(n, 1, 2, 3);
+
+//        PERFORMANT APPROACH:
+        return Problems.fibo(n+1);
+    }
+
+    private static Integer nthFibonacci(Integer n, Integer a, Integer b, Integer currentIndex) {
+        if(n == 1) return 1;
+        if(n == 2) return 2;
+        if(currentIndex.equals(n)) {
+            return a + b;
+        }
+        return Problems.nthFibonacci(n, b, a + b, currentIndex + 1);
+    }
+
+    private static Integer fibo(Integer n) {
+        if(n == 0 || n == 1 ) return n;
+        if (n > 1) return fibo(n-1) + fibo (n-2);
+        return -1;
+    }
 
 
 //    1.2 Write code to reverse a C-Style String. (C-String means that “abcd” is represented as
@@ -23,9 +54,6 @@ public class Problems {
         }
         res[strLength] = chars[strLength];
         return res;
-
-
-
     }
 
 
