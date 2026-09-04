@@ -1,11 +1,5 @@
-import DS.ArrayLists;
-import DS.HashMaps;
-import DS.StringBuilders;
-import Finding.QuickSelect;
+import Searching.QuickSelect;
 import Sorting.BucketSort;
-import Sorting.QuickSort;
-
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {

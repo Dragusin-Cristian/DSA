@@ -1,4 +1,4 @@
-package Finding;
+package Searching;
 
 public class QuickSelect {
 
