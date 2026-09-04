@@ -1,6 +1,7 @@
 import DS.ArrayLists;
 import DS.HashMaps;
 import DS.StringBuilders;
+import Finding.QuickSelect;
 import Sorting.BucketSort;
 import Sorting.QuickSort;
 
@@ -18,10 +19,14 @@ public class Main {
 
         Integer[] arr =  {38, 27, 43, 3, 9, 82, 10};
 
-//        System.out.println(BucketSort.sort(arr));
+//        Sort with new object:
+        System.out.println(BucketSort.sort(arr));
 
-        QuickSort.sort(arr);
-        System.out.println(Arrays.toString(arr));
+//        Sort in place:
+//        QuickSort.sort(arr);
+//        System.out.println(Arrays.toString(arr));
+
+        System.out.println(QuickSelect.find(arr, 3));
 
     }
 }
